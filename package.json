@@ -1,63 +1,53 @@
 {
-  "name": "dart-flutter-exports-suffix-module",
-  "displayName": "Dart & Flutter Exports with suffix (_module)",
-  "description": "Creates export files for Dart & Flutter folders (All rights reserved to elmsec, this is just an adaptation to my teams needs)",
-  "version": "1.0.3",
-  "publisher": "LOFyz",
-  "icon": "icon.png",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/elmsec/dart-flutter-exports"
-  },
-  "engines": {
-    "vscode": "^1.85.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "main": "./extension.js",
-  "contributes": {
-    "configuration": {
-      "title": "Always overwrite",
-      "properties": {
-        "dart-flutter-exports.alwaysOverwrite": {
-          "type": "boolean",
-          "default": false,
-          "description": "Always overwrite existing files"
-        }
-      }
+    "name": "dart-flutter-export-helper",
+    "displayName": "Dart & Flutter Exports",
+    "description": "Creates export files for Dart & Flutter folders",
+    "version": "1.0.4",
+    "publisher": "doroKPNC",
+    "icon": "icon.png",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chriselster/dart-flutter-exports"
     },
-    "commands": [
-      {
-        "command": "dart-flutter-exports.createExporterFiles",
-        "title": "Generate Dart export files"
-      }
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
     ],
-    "menus": {
-      "explorer/context": [
-        {
-          "when": "explorerResourceIsFolder",
-          "command": "dart-flutter-exports.createExporterFiles",
-          "group": "navigation@1000"
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "dart-flutter-exports.createExporterFiles",
+                "title": "Generate Dart export files"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "dart-flutter-exports.createExporterFiles",
+                    "group": "navigation@1000"
+                }
+            ]
         }
-      ]
+    },
+    "activationEvents": [],
+    "commands": [],
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "yarn run lint",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.85.0",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "18.x",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3",
+        "@vscode/test-cli": "^0.0.4",
+        "@vscode/test-electron": "^2.3.8"
     }
-  },
-  "activationEvents": [],
-  "commands": [],
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "yarn run lint",
-    "test": "vscode-test"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.85.0",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8"
-  }
 }
