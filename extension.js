@@ -95,7 +95,7 @@ async function generateAndWriteExporterFile(folder, filePath) {
 
 function generateFileContent(folderName, subfolders, files) {
     const subfolderExports = subfolders.map(subfolder => {
-        const relativePath = path.relative(folderName, subfolder);
+        const relativePath = path.relative(folderName, subfolder).replace(/\\/g, '/');
         return `export '${relativePath}/${path.basename(subfolder)}.dart';`;
     }).join('\n');
 
@@ -106,7 +106,6 @@ function generateFileContent(folderName, subfolders, files) {
         .join('\n');
 
     const exports = `${subfolderExports}\n${fileExports}`;
-    const fileName = folderName.split('/').pop();
 
     return exports;
 }
@@ -143,5 +142,4 @@ module.exports = {
     deactivate,
     generateFileContent,
     shouldSkip,
-    extensionLink,
 };
