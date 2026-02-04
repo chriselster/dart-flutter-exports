@@ -1,5 +1,5 @@
 {
-    "name": "dart-flutter-export-helper",
+    "name": "dart-flutter-export-no-comments",
     "displayName": "Dart & Flutter Exports (no comments)",
     "description": "Creates export files for Dart & Flutter folders",
     "version": "1.0.5",
