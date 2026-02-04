@@ -1,9 +1,9 @@
 {
     "name": "dart-flutter-export-no-comments",
-    "displayName": "Dart & Flutter Exports (no comments)",
+    "displayName": "Dart & Flutter Exports (no comments) 2",
     "description": "Creates export files for Dart & Flutter folders",
-    "version": "1.0.5",
-    "publisher": "doroKPNC",
+    "version": "1.0.6",
+    "publisher": "Doro2",
     "icon": "icon.png",
     "license": "MIT",
     "repository": {
